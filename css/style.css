@@ -8,8 +8,8 @@ body {
   font-family: 'Quicksand', sans-serif;
   background-size: cover;
   background-position: center;
-  
 }
+
 
 #topDiv{
   width: 100%;
@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-right: 1.5vw;
-  width: 13vw;
+  min-width: 180px;
   background-color: rgba(249,249,249,0.7);
   padding: 12px;
   border-radius: 13%;
@@ -120,4 +120,57 @@ input {
 
 input:focus {
   outline: none;
+}
+
+@media (max-width: 576px){
+
+  #greeting{
+    font-size: 2rem;
+    margin:0;
+  }
+  #name{
+    font-size: 2rem;
+    margin:0;
+  }
+  
+  #time{
+    font-size: 4rem;
+    margin:0;
+  }
+
+  label {
+    font-size: 1.6rem;
+  }
+
+  #icon{
+    visibility: hidden;
+  }
+
+  #desc{
+    visibility: hidden;
+  }
+  #weatherDiv{
+    background-color: transparent;
+    padding:0;
+    color:white;
+    text-shadow: 1px 1px 2px #000;
+  }
+
+  html{
+  background-size: cover;
+  background-position: center center fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow: hidden;
+  }
+}
+
+@media (max-width: 1366px){
+  html{
+    background-size: cover;
+    background-position: center center fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
+    }
 }
