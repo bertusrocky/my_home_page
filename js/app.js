@@ -1,19 +1,20 @@
+//Get UI elements
 const time = document.getElementById('time');
 const greeting = document.getElementById('greeting');
 const name = document.getElementById('name');
+const date = document.getElementById('todayDate');
+const formInput = document.getElementById('searchBox');
 
 // show time
 function showTime() {
   let today = new Date(),
     hour = today.getHours(),
-    min = today.getMinutes(),
-    sec = today.getSeconds();
+    min = today.getMinutes();
  
   //output time
-  time.innerHTML = `${addZero(hour)}:${addZero(min)}:${addZero(sec)}`;
+  time.innerHTML = `${addZero(hour)}:${addZero(min)}`;
 
   setTimeout(showTime, 1000);
-
 }
 
 // Add zeros
@@ -28,16 +29,19 @@ function setBgGreet(){
 
   if(hour < 12){
     document.body.style.backgroundImage = "url('./images/morning.jpg')";
-    greeting.textContent = 'Good Morning';
+    greeting.textContent = 'Good Morning,';
+    greeting.style.color = 'white';
+    name.style.color = 'white';
+    time.style.color= 'white';
   } else if (hour < 18) {
     document.body.style.backgroundImage = "url('./images/afternoon.jpg')";
-    greeting.textContent = 'Good Afteroon';
+    greeting.textContent = 'Good Afteroon,';
     greeting.style.color = 'white';
     name.style.color = 'white';
     time.style.color= 'white';
   } else {
     document.body.style.backgroundImage = "url('./images/evening.jpg')";
-    greeting.textContent = 'Good Evening';
+    greeting.textContent = 'Good Evening,';
     greeting.style.color = 'white';
     name.style.color = 'white';
     time.style.color= 'white';
@@ -64,11 +68,13 @@ function setName(e){
   }
 }
 
-
-
 name.addEventListener('keypress', setName);
 name.addEventListener('blur', setName);
 
+// Display today's date
+let todayDate = new Date();
+todayDate = todayDate.toDateString();
+date.innerHTML = todayDate;
 
 
 //run
