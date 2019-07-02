@@ -178,7 +178,7 @@ input:focus {
     }
 }
 
-@media (min-width: 1920px){
+@media (min-width: 1367px){
   html{
     background-size: cover;
     background-position: center center fixed;
