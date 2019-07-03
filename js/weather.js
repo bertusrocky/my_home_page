@@ -32,7 +32,7 @@ class Weather {
       this.string.textContent = weather.data[0].temp + ' C';
       this.icon.setAttribute('src', `https://www.weatherbit.io/static/img/icons/${weather.data[0].weather.icon}.png`);
        }
-  }
+  } 
 
   //Assign location to weather class
   const weather = new Weather('Edinburgh', 'GB');
