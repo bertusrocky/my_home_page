@@ -168,7 +168,7 @@ input:focus {
   }
 }
 
-@media (max-width: 1366px){
+/* @media (max-width: 1366px){
   html{
     background-size: cover;
     background-position: center center fixed;
@@ -231,4 +231,4 @@ input:focus {
     #weatherDiv{
       padding:22px;
     }
-}
+} */
