@@ -35,7 +35,7 @@ function setBgGreet(){
     time.style.color= 'white';
   } else if (hour < 18) {
     document.body.style.backgroundImage = "url('./images/afternoon.jpg')";
-    greeting.textContent = 'Good Afteroon,';
+    greeting.textContent = 'Good Afternoon,';
     greeting.style.color = 'white';
     name.style.color = 'white';
     time.style.color= 'white';
